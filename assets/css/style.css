@@ -1,0 +1,20 @@
+.button {
+    background-color: lightblue;
+    color: navy;
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    align-items: center;
+    min-width: 15%;
+    padding: 1.5em;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border-color:darkslateblue;
+}
+
+.button:hover {
+    background-color: aqua;
+    transition: 0.7s;
+}
+
