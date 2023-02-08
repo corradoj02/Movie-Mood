@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 h1{
     font-family: 'Monoton', cursive;
@@ -24,5 +25,24 @@ h1{
 nav {
     display: inline;
     height: 20%;
+
+.button {
+    background-color: lightblue;
+    color: navy;
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    align-items: center;
+    min-width: 15%;
+    padding: 1.5em;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border-color:darkslateblue;
+}
+
+.button:hover {
+    background-color: aqua;
+    transition: 0.7s;
 }
 
