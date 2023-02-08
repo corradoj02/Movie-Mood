@@ -7,6 +7,11 @@ boredButtonEl.addEventListener('submit', boredSubmitHandler);
 // call api for bored button--action films using Trakt api
 function boredSubmitHandler (event) {
     event.preventDefault();
+   
+
+
+
+
     var apiUrl = "https://api.trakt.tv Content-type";
       
       fetch(apiUrl)
