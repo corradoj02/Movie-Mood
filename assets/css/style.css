@@ -1,3 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+h1{
+    font-family: 'Monoton', cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 180%;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+    padding-left: 2%;
+    display: inline;
+}
+
+.the-m{
+    font-family: 'Monoton', cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 180%;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+}
+
+nav {
+    display: inline;
+    height: 20%;
+
 .button {
     background-color: lightblue;
     color: navy;
