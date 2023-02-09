@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 
 /*base styles and positioning for the cards that will hold the results with placeholder colors */
@@ -46,7 +47,6 @@ h2{
     height: 5rem;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 h1{
     font-family: 'Monoton', cursive;
     font-weight: 700;
@@ -70,8 +70,9 @@ h1{
 }
 
 nav {
-    display: inline;
+    display: relative;
     height: 20%;
+}
 
 .button {
     background-color: lightblue;
