@@ -122,3 +122,13 @@ var checkMovieId = () => {
 // getId();
 // console.log(getRandomId())
 
+
+// Bored Button selector and listener
+var boredButtonEl = document.querySelector('#bored')
+
+// boredButtonEl.addEventListener('submit'and call function)
+boredButtonEl.addEventListener('click', function(){
+    callFilmGenre();
+});
+
+
