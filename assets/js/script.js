@@ -1,17 +1,26 @@
-var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.trakt.tv/genres/movies');
+// Bored Button selector and listener
+var boredButtonEl = document.querySelector('#bored')
 
-request.setRequestHeader('Content-Type', 'application/json');
-request.setRequestHeader('trakt-api-version', '2');
-request.setRequestHeader('trakt-api-key', '4da18c87df7b93d1b4913167620db9a629edd563cc03e0dc67346fef5ac3339b');
+// boredButtonEl.addEventListener('submit'and call function)
+boredButtonEl.addEventListener('click', function(){
+    callFilmGenre();
+});
 
-request.onreadystatechange = function () {
-  if (this.readyState === 4) {
-    console.log('Status:', this.status);
-    console.log('Headers:', this.getAllResponseHeaders());
-    console.log('Body:', this.responseText);
-  }
-};
 
-request.send();
+function callFilmGenre() {
+  var url = 'https://api.themoviedb.org/3/discover/movie?api_key=9351b8541deafd7c3666f42bc7a6a545&with_genres=28&language=en-US'
+  
+
+      fetch(url).then(function (response) {
+        if (response.ok) {
+          response.json().then(function (data) {
+            console.log(data);
+          });
+        } else {
+          console.log('Api is not working')
+        }
+        })
+      }
+  
+
