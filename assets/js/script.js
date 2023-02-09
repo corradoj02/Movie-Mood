@@ -1,32 +1,22 @@
 // Bored Button selector and listener
-var boredButtonEl = document.querySelector('#bored');
-boredButtonEl.addEventListener('submit', boredSubmitHandler);
+// var boredButtonEl = document.querySelector('#bored');
+// boredButtonEl.addEventListener('submit', boredSubmitHandler);
 
-// Trakt api key: 4da18c87df7b93d1b4913167620db9a629edd563cc03e0dc67346fef5ac3339b
+function callFilmGenre() {
+  var url = 'https://api.themoviedb.org/3/discover/movie?api_key=9351b8541deafd7c3666f42bc7a6a545&with_genres=28&language=en-US'
+    
+      // getFilmApi(filmType);
 
-// call api for bored button--action films using Trakt api
-function boredSubmitHandler (event) {
-    event.preventDefault();
-   
-
-
-
-
-    var apiUrl = "https://api.trakt.tv Content-type";
-      
-      fetch(apiUrl)
-      fetch ('https://api.trakt.tv/'
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-            'trakt-api-key': '4da18c87df7b93d1b4913167620db9a629edd563cc03e0dc67346fef5ac3339b'
-            'trakt-api-version': '2'
-
-            
-            ?genres=action&limit=10'
+      fetch(url).then(function (response) {
+        if (response.ok) {
+          response.json().then(function (data) {
+            console.log(data);
+          });
+        } else {
+          console.log('Api is not working')
+        }
         })
-          .then(response => response.json())
-          .then(response => console.log(JSON.stringify(response)))
-        })
-
-}
+      }
+ 
+  callFilmGenre();
+ 
