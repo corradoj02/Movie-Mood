@@ -1,3 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+/*base styles and positioning for the cards that will hold the results with placeholder colors */
+.result-card {
+    position:relative;
+    margin-top: 0rem;
+    margin-right: 1rem;
+    top: 8rem;
+    right: 20rem;
+    border: solid .5rem white;
+    height: 25rem;
+    width: 30rem;
+    background-color: black;
+    
+}
+
+/* ensures the results will fit within the cards and wont spill over */
+#first-movie, #second-movie, #third-movie {
+    height:100%;
+    width: 100%;
+}
+
+/* base styles and positioning for reault card container place holder color */
+.container {
+    color:white;
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position:absolute;
+    height: 35rem;
+    width: 15rem;
+    top: 20rem;
+    left: 0rem;
+    background-color: blue;
+}
+
+/* movie recommendation header base style and positioning place holder color */
+h2{
+    position: relative;
+    font-size: 2rem;
+    font-weight:bolder;
+    margin:0;
+    left:25rem;
+    width:70rem;
+    height: 5rem;
+}
+
+h1{
+    font-family: 'Monoton', cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 180%;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+    padding-left: 2%;
+    display: inline;
+}
+
+.the-m{
+    font-family: 'Monoton', cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 180%;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+}
+
+nav {
+    display: relative;
+    height: 20%;
+}
+
 .button {
     background-color: lightblue;
     color: navy;
@@ -17,4 +93,5 @@
     background-color: aqua;
     transition: 0.7s;
 }
+
 

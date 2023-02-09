@@ -1,3 +1,4 @@
+
 // Bored Button selector and listener
 var boredButtonEl = document.querySelector('#bored')
 
@@ -22,4 +23,4 @@ function callFilmGenre() {
         })
       }
   
- 
+
