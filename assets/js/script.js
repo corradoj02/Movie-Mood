@@ -108,24 +108,24 @@ var checkMovieId = () => {
   getDetails();
 }
 
+
 //function to take in the movieList array, and then fetch for each id within the array. It then sets the array of movie detail objects to the movieDetails array and locally stores it 
-var getDetails = () => {
+var getDetails = async() => {
   getMovieList();
 
-  fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[0])
-    .then(response1 => response1.json())
-    .then(data1 => {
-      fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[1])
-        .then(response2 => response2.json())
-        .then(data2 =>{
-          fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[2])
-            .then(response3 => response3.json())
-            .then(data3 =>{
-              movieDetails = [data1, data2, data3];
-              localStorage.setItem('movieDetails', JSON.stringify(movieDetails))
-            })
-        })
-    })
+  try {
+    const data = await Promise.all([
+      fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[0]).then((response) => response.json()),
+      fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[1]).then((response) => response.json()),
+      fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[2]).then((response) => response.json()),
+    ]);
+    // console.log(data);
+    movieDetails = data;
+    localStorage.setItem('movieDetails', JSON.stringify(movieDetails))
+    console.log(movieDetails);
+  } catch (err){
+    console.log(err)
+  }
 }
 
 
