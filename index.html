@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script 
+        src="https://code.jquery.com/jquery-3.6.3.js" 
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+        crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" 
+    integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" 
+    crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Movie Mood</title>
@@ -15,22 +25,72 @@
     </header>
 
     <main>
+
         <div>
-            <button class="button">Mood1</button>
-            <button class="button">Mood2</button>
-            <button class="button">Mood3</button>
-            <button class="button">Mood4</button>
-            <button class="button">Mood5</button>
+            <button id="bored" class="button is-rounded" type="submit">🥱 Bored</button>
+
+         
+
+    <nav class="navbar is-fixed-top is-info">
+        <h1><span class="the-m">M</span>ovie <span class="the-m">M</span>ood</h1>
+    </nav>
+    
+    
+    
+   
+    <main>
+       <div class="buttons are-medium is-responsive"></div>
+            <button class="button is-rounded" type="submit">🥱 Bored</button>
+
+            <button class="button is-rounded" type="submit">😠 Angry</button>
+            <button class="button is-rounded" type="submit">🤔 Curious</button>
+            <button class="button is-rounded" type="submit">😔 Sad</button>
+            <button class="button is-rounded" type="submit">😊 Happy</button>
         </div>
-        
-        <div class="results-container">
-            Our recommendation based on your mood:
-            <div class="result-card"></div>
-            <div class="result-card"></div>
-            <div class="result-card"></div>
+         <div class="container is-fluid is-info" id="result-container">
+           <h2>Our recommendation based on your mood:</h2> 
+
+           <!--- place holder --->
+            <div class="result-card">
+                <input type="image"  name="saveForm" class="btTxt submit" id="first-movie">
+            </div>
+
+            <div class="result-card">
+                <input type="image"  name="saveForm" class="btTxt submit" id="third-movie">
+            </div>
+            <div class="result-card" >
+                <input type="image"  name="saveForm" class="btTxt submit" id="third-movie">
+            </div>
         </div>
     </main>
+    
+    
+    <!-- modals will open holding details of movies when movie poster is "clicked"-->
+    <div class="modal" id="first-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+                <div class="card"></div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div class="modal" id="second-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+                <div class="card"></div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div class="modal" id="third-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+                <div class="card"></div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    </main>
 
+<script src="/assets/js/script.js"></script>
 
 </body>
+
 </html>
