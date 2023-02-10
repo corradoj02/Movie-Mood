@@ -39,12 +39,11 @@
    
     <main>
        <div class="buttons are-medium is-responsive"></div>
-            <button class="button is-rounded" type="submit">🥱 Bored</button>
-
-            <button class="button is-rounded" type="submit">😠 Angry</button>
-            <button class="button is-rounded" type="submit">🤔 Curious</button>
-            <button class="button is-rounded" type="submit">😔 Sad</button>
-            <button class="button is-rounded" type="submit">😊 Happy</button>
+            <button id="bored" onclick="moodButton(this.id)" class="button is-rounded" type="submit">🥱 Bored</button>
+            <button id="angry" onclick="moodButton(this.id)" class="button is-rounded" type="submit">😠 Angry</button>
+            <button id="curious" onclick="moodButton(this.id)" class="button is-rounded" type="submit">🤔 Curious</button>
+            <button id="sad" onclick="moodButton(this.id)" class="button is-rounded" type="submit">😔 Sad</button>
+            <button id="happy" onclick="moodButton(this.id)" class="button is-rounded" type="submit">😊 Happy</button>
         </div>
          <div class="container is-fluid is-info" id="result-container">
            <h2>Our recommendation based on your mood:</h2> 
