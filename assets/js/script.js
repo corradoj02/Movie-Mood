@@ -131,4 +131,23 @@ boredButtonEl.addEventListener('click', function(){
     callFilmGenre();
 });
 
-
+// firstMovie.setAttribute('src', [api-object].poster);
+  
+// $('#first-result').on('click', function(){
+//     $('#first-modal').addClass('is-active')
+// })
+//  function closeModal($el) {
+//     $el.classList.remove('is-active');
+//   }
+// function closeAllModals() {
+//     (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+//         closeModal($modal);
+//     });
+// }
+//   (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+//       const $target = $close.closest('.modal');
+  
+//       $close.addEventListener('click', () => {
+//         closeModal($target);
+//       });
+//     });
