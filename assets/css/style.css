@@ -32,6 +32,7 @@
     height: 35rem;
     top: 20rem;
     background-color: #0466C8;
+    visibility: hidden;
 }
 
 /* movie recommendation header base style and positioning place holder color */
