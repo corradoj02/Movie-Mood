@@ -1,4 +1,6 @@
+/*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 
 /*base styles and positioning for the cards that will hold the results with placeholder colors */
@@ -46,50 +48,72 @@ h2{
     height: 5rem;
 }
 
+/* Logo Font */
 h1{
     font-family: 'Monoton', cursive;
     font-weight: 700;
     font-style: normal;
-    font-size: 180%;
+    font-size: 2em;
     letter-spacing: -.02em;
     color: rgba(0, 0, 0, 0.8);
     -webkit-font-smoothing: antialiased;
-    padding-left: 2%;
-    display: inline;
+    padding-left: 1em;
 }
 
+/* The "M's" in the logo */
 .the-m{
     font-family: 'Monoton', cursive;
     font-weight: 700;
     font-style: normal;
-    font-size: 180%;
+    font-size: 2em;
     letter-spacing: -.02em;
     color: rgba(0, 0, 0, 0.8);
     -webkit-font-smoothing: antialiased;
 }
 
-nav {
-    display: inline;
-    height: 20%;
+/* Basic header adjustments */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(194, 184, 184, 0.1)
 }
 
+/*Adjustment of button div */
+.button-nav {
+    margin-top: 1em;
+    float: right;
+}
+
+.button-column {
+    display: flex;
+    margin-right: 8em;
+    float: right;
+}
+
+/*Feeling header */
+.h3-style {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 1.9em;
+    margin-right: 6em;
+    color: black;
+}
+
+
 .button {
-    background-color: lightblue;
-    color: navy;
-    font-size: large;
+    background-color: white;
+    color: black;
+    font-size: small;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     align-items: center;
-    min-width: 15%;
-    padding: 1.5em;
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-bottom: 50px;
+    text-align: center;
     border-color:darkslateblue;
 }
 
 .button:hover {
-    background-color: aqua;
+    background-color: #A497AD;
     transition: 0.7s;
 }
 
