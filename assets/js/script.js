@@ -11,10 +11,8 @@ var movieTwoId;
 var movieThreeId;
 
 // The genres in The Movie Data Base have id numbers: {"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},{"id":10751,"name":"Family"},{"id":14,"name":"Fantasy"},{"id":36,"name":"History"},{"id":27,"name":"Horror"},{"id":10402,"name":"Music"},{"id":9648,"name":"Mystery"},{"id":10749,"name":"Romance"},{"id":878,"name":"Science Fiction"},{"id":10770,"name":"TV Movie"},{"id":53,"name":"Thriller"},{"id":10752,"name":"War"},{"id":37,"name":"Western"}]}
-
-// global event listener
-var moodButton = (clicked_id) => {
-  alert(clicked_id);
+var getGenre = () => {
+  return localStorage.getItem('genre');
 }
 
 var getFilmsByGenre = () => {
@@ -83,17 +81,23 @@ var getId = () => {
 // function that's going to check the locally stored movieList array for the randomly generated imdb ids from TMD API call used in getId() function
 var checkMovieId = () => {
   getIMDBId();
-  movieList = getMovieList();
-  var randomIdGen = getIMDBId(getRandomId())
+
+  getMovieList();
+ if (IMDBId != null) {
+  var randomIdGen = getIMDBId(getRandomId()).replaceAll(/\"/g, "")
+ } else {
+  getIMDBId();
+ }
  
 // if the movieList array is less than 3, it's going to use the callFilmGenre() function to make an api call to TMD for getting movie ids, which is going to
 //move through to the cityId() function to randomly select an id and run it through the API call to get the IMDB id to use with OMDB
   var count = 0;
+ if(randomIdGen != null){
   if (movieList.length < 3){
     callFilmGenre();
     for (let i = 0; i < movieList.length; i ++){
       // if the id at the [i] index within the movieList array is already equal to the IMDBId variable, it'll add to the count variable and then jump to the next statement
-      if (movieList[i] === IMDBId){
+     if (movieList[i] === randomIdGen){    
         count++
         break;
       }
@@ -101,10 +105,12 @@ var checkMovieId = () => {
     // if count is less than or equal to 0, the current IMDBId is not already a part of the array. It will then push it removing the extra quotes that get added in the process,
     //and then locally store the new array
     if (count <= 0) {
-      movieList.push(randomIdGen.replaceAll('"', ''));
-      localStorage.setItem('movieList', JSON.stringify(movieList))
+    movieList.push(randomIdGen);
+    localStorage.setItem('movieList', JSON.stringify(movieList));
+    callFilmGenre(genre);
     }
   }
+ }
   getDetails();
 }
 
@@ -113,6 +119,7 @@ var checkMovieId = () => {
 var getDetails = async() => {
   getMovieList();
 
+ if (movieList.length === 3){
   try {
     const data = await Promise.all([
       fetch('https://www.omdbapi.com/?apikey=' + OMDKey + '&i=' + movieList[0]).then((response) => response.json()),
@@ -126,6 +133,10 @@ var getDetails = async() => {
   } catch (err){
     console.log(err)
   }
+ } else {
+  callFilmGenre()
+ }
+}
 }
 
 
