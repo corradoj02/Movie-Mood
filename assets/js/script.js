@@ -10,7 +10,30 @@ var movieOneId;
 var movieTwoId;
 var movieThreeId;
 
+var bored = [28, 12]
+var angry = [80, 27]
+var curious = [99, 18]
+var Sad = [35, 10749]
+var happy = [16, 14]
+
 // The genres in The Movie Data Base have id numbers: {"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},{"id":10751,"name":"Family"},{"id":14,"name":"Fantasy"},{"id":36,"name":"History"},{"id":27,"name":"Horror"},{"id":10402,"name":"Music"},{"id":9648,"name":"Mystery"},{"id":10749,"name":"Romance"},{"id":878,"name":"Science Fiction"},{"id":10770,"name":"TV Movie"},{"id":53,"name":"Thriller"},{"id":10752,"name":"War"},{"id":37,"name":"Western"}]}
+
+
+
+
+
+
+
+document.querySelector("#sad").onclick = function () {
+  genre = Sad;
+  callFilmGenre(genre);
+}
+
+document.querySelector("#happy").onclick = function () {
+  genre = happy;
+  callFilmGenre(genre);
+}
+
 
 // global event listener
 var moodButton = (clicked_id) => {
@@ -131,6 +154,7 @@ var getDetails = async() => {
 
 
 callFilmGenre();   
+
 
 
 // firstMovie.setAttribute('src', [api-object].poster);
