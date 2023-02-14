@@ -188,6 +188,65 @@ header {
     transition: 0.7s;
 }
 
+
+.modal-container {
+   display:flex;
+   position:relative;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-family: Montserrat;
+   letter-spacing: .2rem;
+
+}
+
+.modal-card-head {
+   width: fit-content;
+   background-color: #A497AD;
+   align-content: center;
+   font-weight:bolder;
+   width:65rem;
+}
+
+.modal-card {
+   display:flex;
+   position:relative;
+   top:5rem;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 30rem;
+   line-height: 2rem;
+   font-weight:bolder;
+   width:65rem;
+}
+
+.modal-card-title{
+   width: fit-content;
+}
+
+.modal-body {
+   align-items:center;
+   width: 65rem;
+}
+.movie-actors, .movie-director, .movie-year, .movie-genre {
+   font-size:.7rem;
+   font-weight: bolder;
+}
+
+.movie-genre{
+   margin-bottom:1.5rem;
+}
+
+.movie-actors {
+   margin-top: 1.5rem;
+}
+
+.movie-rating, .movie-title{
+   font-weight: bolder;
+}
+
 /*Feelin Something Differnt header and button styling */
 .FSDheader {
     font-family: 'Montserrat', sans-serif;
@@ -223,7 +282,6 @@ footer {
     width: 100%;
     text-align: center;
 }
-
 
 body {
     background-image: url(../img/image4.jpg);
