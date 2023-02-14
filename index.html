@@ -41,48 +41,80 @@
         </div>
          
         <div class="container is-fluid is-info" id="result-container">
+          
            <h2>Our recommendation based on your mood:</h2> 
 
-           <!--- place holder --->
-            <div class="result-card">
-                <input type="image"  name="saveForm" class="btTxt submit" id="first-movie">
+     
+           
+           <div class="carousel-container">
+            <!-- Modal 1 -->
+            <div id="first-modal" class="modal">
+                <div class="first-modal-background"></div>
+                <div class="modal-content">
+                    <div class="movie-details">
+                        <h3 class="movie-title">Title</h3>
+                        <div class-"movie-info">
+                            <p>info 1</p>
+                            <p>info 2</p>
+                            <p>info 3</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
             </div>
+              
+              <!-- Modal 2 -->
+            <div id="second-modal" class="modal">
+                <div class="second-modal-background"></div>
+                <div class="modal-content">
+                    <div class="movie-details">
+                        <h3 class="movie-title">Title</h3>
+                        <div class-"movie-info">
+                            <p>info 1</p>
+                            <p>info 2</p>
+                            <p>info 3</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+              
+              <!-- Modal 3 -->
+            <div id="third-modal" class="modal">
+                <div class="third-modal-background"></div>
+                <div class="modal-content">
+                    <div class="movie-details">
+                        <h3 class="movie-title">Title</h3>
+                        <div class-"movie-info">
+                            <p>info 1</p>
+                            <p>info 2</p>
+                            <p>info 3</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </div> 
+        <div id="clear-refresh"></div>
 
-            <div class="result-card">
-                <input type="image"  name="saveForm" class="btTxt submit" id="third-movie">
-            </div>
-            <div class="result-card" >
-                <input type="image"  name="saveForm" class="btTxt submit" id="third-movie">
-            </div>
-        </div>
-    </main>
     
+
+
+
     
-    <!-- modals will open holding details of movies when movie poster is "clicked"-->
-    <div class="modal" id="first-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-                <div class="card"></div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <div class="modal" id="second-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-                <div class="card"></div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <div class="modal" id="third-modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-                <div class="card"></div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-    </div>
+
+
     </main>
 
-<script src="/assets/js/script.js"></script>
+    <footer>
+        <div id="level">
+            <h3 class="level-item">Feelin' Something Different?</h3>
+            <button class="button is-rounded vibe-shift vsColor level-item" id="vibe-shift">Vibe Shift</button>
+        </div>
+    </footer>
+
+<script src="./assets/js/script.js"></script>
 
 </body>
 

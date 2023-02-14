@@ -18,13 +18,9 @@ var happy = [16, 14]
 
 // The genres in The Movie Data Base have id numbers: {"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},{"id":10751,"name":"Family"},{"id":14,"name":"Fantasy"},{"id":36,"name":"History"},{"id":27,"name":"Horror"},{"id":10402,"name":"Music"},{"id":9648,"name":"Mystery"},{"id":10749,"name":"Romance"},{"id":878,"name":"Science Fiction"},{"id":10770,"name":"TV Movie"},{"id":53,"name":"Thriller"},{"id":10752,"name":"War"},{"id":37,"name":"Western"}]}
 
+
 var getGenre = () => {
   return localStorage.getItem('genre');
-
-
-
-
-
 
 document.querySelector("#sad").onclick = function () {
   genre = Sad;
@@ -177,27 +173,78 @@ var getDetails = async() => {
 
 
 
-callFilmGenre();   
+// global event listener
+var moodButton = (clicked_id) => {
+
+  switch (clicked_id){
+    case "happy":
+      genre = happy[Math.floor(Math.random()*happy.length)];
+      callFilmGenre(genre)
+      break;
+    case "sad":
+      genre = sad[Math.floor(Math.random()*sad.length)];
+      callFilmGenre(genre)
+      break;
+    case "bored":
+      genre = bored[Math.floor(Math.random()*bored.length)];
+      callFilmGenre(genre)
+      break;
+    case "angry":
+      genre = angry[Math.floor(Math.random()*angry.length)];
+      callFilmGenre(genre)
+      break;
+    case "curious":
+      genre = curious[Math.floor(Math.random()*curious.length)];
+      callFilmGenre(genre)
+      break;
+  }
+ }
+
+
+var openModal = (identifier) =>{
+  dataTarget = $(identifier).data('target')
+  $('#' + dataTarget).addClass('is-active')
+  $('#result-container').css('visibility', 'hidden')
+}
+
+
+var closeModal = (identifier) => {
+  dataTarget = $(identifier).data('target')
+  $('#' + dataTarget).removeClass('is-active')
+  $('#result-container').css('visibility', 'visible')
+}
 
 
 
-// firstMovie.setAttribute('src', [api-object].poster);
-  
-// $('#first-result').on('click', function(){
-//     $('#first-modal').addClass('is-active')
-// })
-//  function closeModal($el) {
-//     $el.classList.remove('is-active');
-//   }
-// function closeAllModals() {
-//     (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-//         closeModal($modal);
-//     });
-// }
-//   (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-//       const $target = $close.closest('.modal');
-  
-//       $close.addEventListener('click', () => {
-//         closeModal($target);
-//       });
-//     });
+$(document).ready(function() {
+  var $carouselContainer = $(".carousel-container");
+  var $carouselItems = $(".carousel-item");
+  var $activeItem = $(".carousel-item.is-active");
+
+  $carouselItems.click(function() {
+    var $clickedItem = $(this);
+    $activeItem.removeClass("is-active");
+    $clickedItem.addClass("is-active");
+    $activeItem = $clickedItem;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    $carouselItems.removeClass("is-prev is-next");
+    var activeIndex = $carouselItems.index($activeItem)
+    var prevIndex = (activeIndex + $carouselItems.length - 1) % $carouselItems.length;
+    var nextIndex = (activeIndex + 1 ) % $carouselItems.length;
+    $carouselItems.eq(prevIndex).addClass("is-prev");
+    $carouselItems.eq(nextIndex).addClass("is-next");
+  }
+});
+
+$(document).ready(function() {
+  $("#vibe-shift").click(function() {
+    $(this).css("background-color", "#FFFF33");
+    localStorage.clear();
+    location.reload();
+  });
+});
+
+
