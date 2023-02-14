@@ -106,13 +106,12 @@ header {
 /*Adjustment of button div */
 .button-nav {
     margin-top: 1em;
-    float: right;
 }
 
 .button-column {
     display: flex;
-    margin-right: 8em;
-    float: right;
+    justify-content: center;
+    width: 100%;
 }
 
 /*Feeling header */
