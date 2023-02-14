@@ -201,3 +201,30 @@ callFilmGenre();
 //         closeModal($target);
 //       });
 //     });
+
+// global event listener
+var moodButton = (clicked_id) => {
+
+  switch (clicked_id){
+    case "happy":
+      genre = happy[Math.floor(Math.random()*happy.length)];
+      callFilmGenre(genre)
+      break;
+    case "sad":
+      genre = sad[Math.floor(Math.random()*sad.length)];
+      callFilmGenre(genre)
+      break;
+    case "bored":
+      genre = bored[Math.floor(Math.random()*bored.length)];
+      callFilmGenre(genre)
+      break;
+    case "angry":
+      genre = angry[Math.floor(Math.random()*angry.length)];
+      callFilmGenre(genre)
+      break;
+    case "curious":
+      genre = curious[Math.floor(Math.random()*curious.length)];
+      callFilmGenre(genre)
+      break;
+  }
+ }
