@@ -173,5 +173,78 @@ var getDetails = async() => {
 
 
 
-callFilmGenre();   
+// global event listener
+var moodButton = (clicked_id) => {
+
+  switch (clicked_id){
+    case "happy":
+      genre = happy[Math.floor(Math.random()*happy.length)];
+      callFilmGenre(genre)
+      break;
+    case "sad":
+      genre = sad[Math.floor(Math.random()*sad.length)];
+      callFilmGenre(genre)
+      break;
+    case "bored":
+      genre = bored[Math.floor(Math.random()*bored.length)];
+      callFilmGenre(genre)
+      break;
+    case "angry":
+      genre = angry[Math.floor(Math.random()*angry.length)];
+      callFilmGenre(genre)
+      break;
+    case "curious":
+      genre = curious[Math.floor(Math.random()*curious.length)];
+      callFilmGenre(genre)
+      break;
+  }
+ }
+
+
+var openModal = (identifier) =>{
+  dataTarget = $(identifier).data('target')
+  $('#' + dataTarget).addClass('is-active')
+  $('#result-container').css('visibility', 'hidden')
+}
+
+
+var closeModal = (identifier) => {
+  dataTarget = $(identifier).data('target')
+  $('#' + dataTarget).removeClass('is-active')
+  $('#result-container').css('visibility', 'visible')
+}
+
+
+
+$(document).ready(function() {
+  var $carouselContainer = $(".carousel-container");
+  var $carouselItems = $(".carousel-item");
+  var $activeItem = $(".carousel-item.is-active");
+
+  $carouselItems.click(function() {
+    var $clickedItem = $(this);
+    $activeItem.removeClass("is-active");
+    $clickedItem.addClass("is-active");
+    $activeItem = $clickedItem;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    $carouselItems.removeClass("is-prev is-next");
+    var activeIndex = $carouselItems.index($activeItem)
+    var prevIndex = (activeIndex + $carouselItems.length - 1) % $carouselItems.length;
+    var nextIndex = (activeIndex + 1 ) % $carouselItems.length;
+    $carouselItems.eq(prevIndex).addClass("is-prev");
+    $carouselItems.eq(nextIndex).addClass("is-next");
+  }
+});
+
+$(document).ready(function() {
+  $("#vibe-shift").click(function() {
+    $(this).css("background-color", "#FFFF33");
+    localStorage.clear();
+    location.reload();
+  });
+});
+
 
