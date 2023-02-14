@@ -13,20 +13,23 @@ body {
 }
 
 footer{
-    align-content: center;
-    align-items: center;
     display: flex;
-    position:absolute;
-    left: 50rem;
-    top: 40rem;
     visibility: hidden;
 }
 
-#vibe-shift{
-   position:absolute;
-   top: 4rem;
-   left: -25rem;
+#vibe-check {
+    position:absolute;
+    left: 48rem;
+    top:-8rem;
 }
+
+#vibe-shift{
+    position:absolute;
+    left: 25rem;
+    top:-4rem;
+    left: 54rem;
+}
+
 
 /*base styles and positioning for the cards that will hold the results with placeholder colors */
 .result-card {
