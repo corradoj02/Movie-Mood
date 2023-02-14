@@ -4,6 +4,7 @@
 
 
 /*background image */
+
 body {
     background-image: url(../images/popcorn_background_2.png);
     background-repeat: no-repeat;
@@ -12,12 +13,6 @@ body {
     min-height: 150vh;
 }
 
-footer{
-   display: flex;
-   position:relative;
-   left: 52rem;
-   top: 50rem;
-}
 
 #vibe-shift{
    position:relative;
@@ -57,6 +52,7 @@ footer{
    position:absolute;
    height: 35rem;
    top: 20rem;
+   left: 4.5rem
 }
 
 /* movie recommendation header base style and positioning place holder color */
@@ -66,7 +62,7 @@ h2{
    font-weight:bolder;
    margin:0;
    top:-10rem;
-   left:35rem;
+   left:26.5rem;
    width:70rem;
    height: 5rem;
    color:black;
@@ -154,7 +150,7 @@ header {
         background-position: center;
         background-size: cover;
         min-height: 150vh;
-        min-width: 153vh;
+        min-width: 66.2em;
     }
     
     header {
@@ -206,6 +202,111 @@ header {
         display: flex;
         margin-left: 3em;
     }
+
+    h2{
+        position: relative;
+        font-size: 2rem;
+        font-weight:700;
+        margin:0;
+        top:-10rem;
+        left:26.5rem;
+        width:70rem;
+        height: 5rem;
+        color:black;
+        font-family: Montserrat;
+     }
+
+    .container {
+        color:white;
+        text-align: center;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position:absolute;
+        height: 20rem;
+        top: 34rem;
+        left: 2rem;
+     }
+
+     .result-card input {
+        height:19rem;
+        width:15rem;
+        border: solid .5rem black;
+        border-radius: 25px;
+     }
+
+
+     .result-card {
+        position:relative;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        top: 3rem;
+        right: 20rem;
+        border: solid .5rem white;
+        width: 60rem;
+        height: 20rem;
+        background-color: black;
+        border-radius: 25px;
+     }
+
+     .modal-container {
+        display:flex;
+        position:relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Montserrat;
+        letter-spacing: .2rem;
+     
+     }
+     
+     .modal-card-head {
+        width: fit-content;
+        background-color: #A497AD;
+        align-content: center;
+        font-weight:bolder;
+        width:65rem;
+     }
+     
+     .modal-card {
+        display:flex;
+        position:relative;
+        top:5rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 30rem;
+        line-height: 2rem;
+        font-weight:bolder;
+        width:65rem;
+     }
+     
+     .modal-card-title{
+        width: fit-content;
+     }
+     
+     .modal-body {
+        align-items:center;
+        width: 65rem;
+     }
+     .movie-actors, .movie-director, .movie-year, .movie-genre {
+        font-size:.7rem;
+        font-weight: bolder;
+     }
+     
+     .movie-genre{
+        margin-bottom:1.5rem;
+     }
+     
+     .movie-actors {
+        margin-top: 1.5rem;
+     }
+     
+     .movie-rating, .movie-title{
+        font-weight: bolder;
+     }
+
 }
 
 /*phone 1*/
@@ -217,7 +318,7 @@ header {
         background-position: center;
         background-size: cover;
         min-height: 400vh;
-        min-width: 250vh;
+        min-width: 200em;
     }
 
     header {
@@ -281,6 +382,113 @@ header {
         display: flex;
         margin-left: 2em;
     }
+
+    h2{
+        position: relative;
+        font-size: 2rem;
+        font-weight:700;
+        margin:0;
+        top:-10rem;
+        left:26.5rem;
+        width:70rem;
+        height: 5rem;
+        color:black;
+        font-family: Montserrat;
+     }
+
+    .container {
+        color:white;
+        text-align: center;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position:absolute;
+        height: 35rem;
+        top: 80rem;
+        left: 17.2rem;
+     }
+
+     .result-card input {
+        height:24.2rem;
+        width: 20rem;
+        border: solid .5rem black;
+        border-radius: 25px;
+     }
+
+
+     .result-card {
+        position:relative;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        top: 3rem;
+        right: 20rem;
+        border: solid .5rem white;
+        width: 60rem;
+        height: 25rem;
+        background-color: black;
+        border-radius: 25px;
+     }
+
+     .modal-container {
+        display:flex;
+        position:relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Montserrat;
+        letter-spacing: .2rem;
+     
+     }
+     
+     .modal-card-head {
+        width: fit-content;
+        background-color: #A497AD;
+        align-content: center;
+        font-weight:bolder;
+        width:65rem;
+     }
+     
+     .modal-card {
+        display:flex;
+        position:relative;
+        top:5rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 30rem;
+        line-height: 2rem;
+        font-weight:bolder;
+        width:65rem;
+        margin-left: 21.5rem;
+     }
+     
+     .modal-card-title{
+        width: fit-content;
+     }
+     
+     .modal-body {
+        align-items:center;
+        width: 65rem;
+     }
+     .movie-actors, .movie-director, .movie-year, .movie-genre {
+        font-size:.7rem;
+        font-weight: bolder;
+     }
+     
+     .movie-genre{
+        margin-bottom:1.5rem;
+     }
+     
+     .movie-actors {
+        margin-top: 1.5rem;
+     }
+     
+     .movie-rating, .movie-title{
+        font-weight: bolder;
+     }
+
+
 }
 
 /*phone 2*/
@@ -326,6 +534,7 @@ header {
         color: black;
     }
 
+
     .button {
         background-color: white;
         color: black;
@@ -346,6 +555,112 @@ header {
         display: flex;
         margin-left: 2em;
     }
+
+    h2{
+        position: relative;
+        font-size: 2rem;
+        font-weight:700;
+        margin:0;
+        top:-10rem;
+        left:26.5rem;
+        width:70rem;
+        height: 5rem;
+        color:black;
+        font-family: Montserrat;
+     }
+
+    .container {
+        color:white;
+        text-align: center;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position:absolute;
+        height: 35rem;
+        top: 80rem;
+        left: 9.6rem;
+     }
+
+     .result-card input {
+        height:24.2rem;
+        width: 20rem;
+        border: solid .5rem black;
+        border-radius: 25px;
+     }
+
+
+     .result-card {
+        position:relative;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        top: 3rem;
+        right: 20rem;
+        border: solid .5rem white;
+        width: 60rem;
+        height: 25rem;
+        background-color: black;
+        border-radius: 25px;
+     }
+
+     .modal-container {
+        display:flex;
+        position:relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Montserrat;
+        letter-spacing: .2rem;
+     
+     }
+     
+     .modal-card-head {
+        width: fit-content;
+        background-color: #A497AD;
+        align-content: center;
+        font-weight:bolder;
+        width:65rem;
+     }
+     
+     .modal-card {
+        display:flex;
+        position:relative;
+        top:5rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 30rem;
+        line-height: 2rem;
+        font-weight:bolder;
+        width:65rem;
+        margin-left: 14.6em;
+     }
+     
+     .modal-card-title{
+        width: fit-content;
+     }
+     
+     .modal-body {
+        align-items:center;
+        width: 65rem;
+     }
+     .movie-actors, .movie-director, .movie-year, .movie-genre {
+        font-size:.7rem;
+        font-weight: bolder;
+     }
+     
+     .movie-genre{
+        margin-bottom:1.5rem;
+     }
+     
+     .movie-actors {
+        margin-top: 1.5rem;
+     }
+     
+     .movie-rating, .movie-title{
+        font-weight: bolder;
+     }
+
 }
 
 /*phone 3*/
@@ -411,9 +726,115 @@ header {
         display: flex;
         margin-left: 2em;
     }
+
+    h2{
+        position: relative;
+        font-size: 2rem;
+        font-weight:700;
+        margin:0;
+        top:-10rem;
+        left:26.5rem;
+        width:70rem;
+        height: 5rem;
+        color:black;
+        font-family: Montserrat;
+     }
+
+    .container {
+        color:white;
+        text-align: center;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position:absolute;
+        height: 35rem;
+        top: 80rem;
+        left: 3.7rem;
+     }
+
+     .result-card input {
+        height:24.2rem;
+        width: 20rem;
+        border: solid .5rem black;
+        border-radius: 25px;
+     }
+
+
+     .result-card {
+        position:relative;
+        margin-top: 0rem;
+        margin-right: 5rem;
+        top: 3rem;
+        right: 20rem;
+        border: solid .5rem white;
+        width: 60rem;
+        height: 25.2rem;
+        background-color: black;
+        border-radius: 25px;
+     }
+
+     .modal-container {
+        display:flex;
+        position:relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Montserrat;
+        letter-spacing: .2rem;
+     
+     }
+     
+     .modal-card-head {
+        width: fit-content;
+        background-color: #A497AD;
+        align-content: center;
+        font-weight:bolder;
+        width:65rem;
+     }
+     
+     .modal-card {
+        display:flex;
+        position:relative;
+        top:5rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 30rem;
+        line-height: 2rem;
+        font-weight:bolder;
+        width:65rem;
+        margin-left: 8.3em;
+     }
+     
+     .modal-card-title{
+        width: fit-content;
+     }
+     
+     .modal-body {
+        align-items:center;
+        width: 65rem;
+     }
+     .movie-actors, .movie-director, .movie-year, .movie-genre {
+        font-size:.7rem;
+        font-weight: bolder;
+     }
+     
+     .movie-genre{
+        margin-bottom:1.5rem;
+     }
+     
+     .movie-actors {
+        margin-top: 1.5rem;
+     }
+     
+     .movie-rating, .movie-title{
+        font-weight: bolder;
+     }
+
 }
 
-
+/*Modal*/
 .modal-container {
    display:flex;
    position:relative;
@@ -486,7 +907,7 @@ header {
 #vibe-shift {
     position: relative;
     bottom: 10rem;
-    right: 20rem;
+    right: 17rem;
     display: inline-block;
     margin-top: 1.9em; /* add this */
 }
@@ -502,8 +923,8 @@ header {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+    display: flex;
+      margin-left: 20rem;
+      margin-top: 20rem;
+      display: none;
+   }
