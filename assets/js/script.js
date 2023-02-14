@@ -20,6 +20,7 @@ var happy = [16, 14]
 
 var getGenre = () => {
   return localStorage.getItem('genre');
+}
 
 
 
@@ -173,7 +174,7 @@ var getDetails = async() => {
   callFilmGenre()
  }
 }
-}
+
 
 
 
