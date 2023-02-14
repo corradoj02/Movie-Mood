@@ -175,12 +175,6 @@ var getDetails = async() => {
 }
 }
 
-
-
-callFilmGenre();   
-
-
-
 // firstMovie.setAttribute('src', [api-object].poster);
   
 // $('#first-result').on('click', function(){
@@ -201,3 +195,47 @@ callFilmGenre();
 //         closeModal($target);
 //       });
 //     });
+
+callFilmGenre(); 
+
+
+
+$(document).ready(function() {
+  var $carouselContainer = $(".carousel-container");
+  var $carouselItems = $(".carousel-item");
+  var $activeItem = $(".carousel-item.is-active");
+
+  $carouselItems.click(function() {
+    var $clickedItem = $(this);
+    $activeItem.removeClass("is-active");
+    $clickedItem.addClass("is-active");
+    $activeItem = $clickedItem;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    $carouselItems.removeClass("is-prev is-next");
+    var activeIndex = $carouselItems.index($activeItem)
+    var prevIndex = (activeIndex + $carouselItems.length - 1) % $carouselItems.length;
+    var nextIndex = (activeIndex + 1 ) % $carouselItems.length;
+    $carouselItems.eq(prevIndex).addClass("is-prev");
+    $carouselItems.eq(nextIndex).addClass("is-next");
+  }
+});
+
+$(document).ready(function() {
+  $("#vibe-shift").click(function() {
+    $(this).css("background-color", "#FFFF33");
+    localStorage.clear();
+    location.reload();
+  });
+});
+
+
+
+
+  
+
+
+
+
