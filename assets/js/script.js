@@ -250,6 +250,7 @@ var moodButton = (clicked_id) => {
       callFilmGenre(genre)
       break;
   }
+  $('#level').css('visibility', 'visible')
  }
 
 
@@ -271,6 +272,7 @@ $(document).ready(function() {
     $(this).css("background-color", "#FFFF33");
     localStorage.clear();
     location.reload();
+    $('#level').css('visibility', 'hidden')
   });
 });
 

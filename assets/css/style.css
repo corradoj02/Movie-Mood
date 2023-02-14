@@ -13,16 +13,19 @@ body {
 }
 
 footer{
-   display: flex;
-   position:relative;
-   left: 52rem;
-   top: 50rem;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    position:absolute;
+    left: 50rem;
+    top: 40rem;
+    visibility: hidden;
 }
 
 #vibe-shift{
-   position:relative;
-   top: 0rem;
-   left: 0rem;
+   position:absolute;
+   top: 4rem;
+   left: -25rem;
 }
 
 /*base styles and positioning for the cards that will hold the results with placeholder colors */
