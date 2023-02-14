@@ -18,13 +18,9 @@ var happy = [16, 14]
 
 // The genres in The Movie Data Base have id numbers: {"genres":[{"id":28,"name":"Action"},{"id":12,"name":"Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},{"id":10751,"name":"Family"},{"id":14,"name":"Fantasy"},{"id":36,"name":"History"},{"id":27,"name":"Horror"},{"id":10402,"name":"Music"},{"id":9648,"name":"Mystery"},{"id":10749,"name":"Romance"},{"id":878,"name":"Science Fiction"},{"id":10770,"name":"TV Movie"},{"id":53,"name":"Thriller"},{"id":10752,"name":"War"},{"id":37,"name":"Western"}]}
 
+
 var getGenre = () => {
   return localStorage.getItem('genre');
-
-
-
-
-
 
 document.querySelector("#sad").onclick = function () {
   genre = Sad;
@@ -175,28 +171,7 @@ var getDetails = async() => {
 }
 }
 
-// firstMovie.setAttribute('src', [api-object].poster);
-  
-// $('#first-result').on('click', function(){
-//     $('#first-modal').addClass('is-active')
-// })
-//  function closeModal($el) {
-//     $el.classList.remove('is-active');
-//   }
-// function closeAllModals() {
-//     (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-//         closeModal($modal);
-//     });
-// }
-//   (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-//       const $target = $close.closest('.modal');
-  
-//       $close.addEventListener('click', () => {
-//         closeModal($target);
-//       });
-//     });
 
-callFilmGenre(); 
 
 // global event listener
 var moodButton = (clicked_id) => {
@@ -271,12 +246,5 @@ $(document).ready(function() {
     location.reload();
   });
 });
-
-
-
-
-  
-
-
 
 
