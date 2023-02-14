@@ -21,6 +21,7 @@ var happy = [16, 14]
 
 var getGenre = () => {
   return localStorage.getItem('genre');
+}
 
 document.querySelector("#sad").onclick = function () {
   genre = Sad;
@@ -169,7 +170,7 @@ var getDetails = async() => {
   callFilmGenre()
  }
 }
-}
+
 
 
 
