@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
+
 /*background image */
 body {
     background-image: url(../images/popcorn_background_2.png);
@@ -11,17 +12,15 @@ body {
     min-height: 150vh;
 }
 
-
 /*base styles and positioning for the cards that will hold the results with placeholder colors */
-.result-card {
+.card {
     position:relative;
     margin-top: 0rem;
     margin-right: 5rem;
     top: 8rem;
-    right: 20rem;
     border: solid .5rem white;
-    height: 25rem;
-    width: 30rem;
+    height: 40rem;
+    width: 27rem;
     background-color: black;
     
 }
@@ -43,7 +42,7 @@ body {
     height: 35rem;
     top: 20rem;
     background-color: #0466C8;
-    visibility: hidden;
+    
 }
 
 /* movie recommendation header base style and positioning place holder color */
@@ -107,6 +106,7 @@ header {
     margin-top: 1.9em;
     margin-right: 6em;
     color: black;
+    display: inline-block;
 }
 
 
@@ -397,3 +397,96 @@ header {
 }
 
 
+.modal-container {
+   display:flex;
+   position:relative;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-family: Montserrat;
+   letter-spacing: .2rem;
+
+}
+
+.modal-card-head {
+   width: fit-content;
+   background-color: #A497AD;
+   align-content: center;
+   font-weight:bolder;
+   width:65rem;
+}
+
+.modal-card {
+   display:flex;
+   position:relative;
+   top:5rem;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 30rem;
+   line-height: 2rem;
+   font-weight:bolder;
+   width:65rem;
+}
+
+.modal-card-title{
+   width: fit-content;
+}
+
+.modal-body {
+   align-items:center;
+   width: 65rem;
+}
+.movie-actors, .movie-director, .movie-year, .movie-genre {
+   font-size:.7rem;
+   font-weight: bolder;
+}
+
+.movie-genre{
+   margin-bottom:1.5rem;
+}
+
+.movie-actors {
+   margin-top: 1.5rem;
+}
+
+.movie-rating, .movie-title{
+   font-weight: bolder;
+}
+
+/*Feelin Something Differnt header and button styling */
+.FSDheader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 1.9em;
+    margin-right: 6em;
+    color: black;
+    display: inline-block;
+}
+
+#vibe-shift {
+    position: relative;
+    bottom: 10rem;
+    right: 20rem;
+    display: inline-block;
+    margin-top: 1.9em; /* add this */
+}
+      
+.vsColor {
+    background-color: #9900FF;
+    color: #39ff14
+}
+
+.vsColor:hover {
+    background-color: #39ff14;
+    color: #9900FF;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
