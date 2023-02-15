@@ -13,20 +13,17 @@ body {
     min-height: 150vh;
 }
 
-footer{
-    display: flex;
-    visibility: hidden;
-}
+footer {
+   display: flex;
+     margin-left: -10rem;
+     margin-top: 42rem;
+     visibility: hidden;
+  }
 
-#vibe-check {
-    position:absolute;
-    left: 48rem;
-    top:-8rem;
-}
 
 #vibe-shift{
     position:absolute;
-    left: 25rem;
+    left: 20rem;
     top:-4rem;
     left: 54rem;
 }
@@ -38,7 +35,7 @@ footer{
    margin-top: 0rem;
    margin-right: 5rem;
    top: 3rem;
-   right: 20rem;
+   right: 25rem;
    border: solid .5rem white;
    height: 25rem;
    width: 30rem;
@@ -74,7 +71,7 @@ h2{
    font-weight:bolder;
    margin:0;
    top:-10rem;
-   left:26.5rem;
+   left:30rem;
    width:70rem;
    height: 5rem;
    color:black;
@@ -933,8 +930,3 @@ header {
     color: #9900FF;
 }
 
-footer {
-    display: flex;
-      margin-left: -5.6em;
-      margin-top: 42rem;
-   }
