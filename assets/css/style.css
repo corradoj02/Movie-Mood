@@ -935,7 +935,6 @@ header {
 
 footer {
     display: flex;
-      margin-left: 20rem;
-      margin-top: 20rem;
-      display: none;
+      margin-left: -5.6em;
+      margin-top: 42rem;
    }
