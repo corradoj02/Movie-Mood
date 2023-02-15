@@ -13,16 +13,13 @@ body {
     min-height: 150vh;
 }
 
-footer{
-    display: flex;
-    visibility: hidden;
-}
+footer {
+   display: flex;
+     margin-left: -5.6em;
+     margin-top: 42rem;
+     visibility: hidden;
+  }
 
-#vibe-check {
-    position:absolute;
-    left: 48rem;
-    top:-8rem;
-}
 
 #vibe-shift{
     position:absolute;
@@ -933,9 +930,3 @@ header {
     color: #9900FF;
 }
 
-footer {
-    display: flex;
-      margin-left: 20rem;
-      margin-top: 20rem;
-      display: none;
-   }
